@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ajay's photography portfolio showcasing portraits, weddings, and travel.">
-  <title>FRAME — Photographer Portfolio</title>
+  <meta name="description" content="Explore Ajay's photography portfolio featuring portraits, weddings, travel and meaningful moments.">
+  <meta name="theme-color" content="#f6f4ef">
+
+  <title>Ajay Photography — Stories Worth Watching</title>
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -13,7 +16,9 @@
 
   <!-- Header -->
   <header class="wrap topbar">
-    <a class="brand" href="#home">FRAME<span>.</span></a>
+    <a class="brand" href="#home" aria-label="Ajay Photography home">
+      AJAY<span>.</span>
+    </a>
 
     <nav aria-label="Main navigation">
       <a href="#work">Portfolio</a>
@@ -24,18 +29,17 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="wrap hero" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow">
-          Photographer · Available for select projects
-        </div>
 
-        <h1>Stories worth <em>seeing.</em></h1>
+    <!-- Cinematic Hero -->
+    <section class="hero hero-cinematic" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">Photographer</div>
+
+        <h1>Stories worth <em>watching.</em></h1>
 
         <p>
-          I'm Ajay Yadav, a photographer capturing fleeting moments,
-          beautiful details, the stories and the emotions hidden within every frame.
+          I'm Ajay, a photographer capturing fleeting moments,
+          beautiful details, and the stories and emotions hidden within every frame.
         </p>
 
         <div class="actions">
@@ -46,108 +50,163 @@
 
       <div class="hero-image">
         <img
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85"
-          alt="Wedding couple standing together outdoors"
+          src="./Assets/AND06323copy.jpeg"
+          alt="Wedding couple photographed outdoors"
+          fetchpriority="high"
         >
-        <div class="image-note">Selected story · 2026</div>
+        <div class="image-note">Selected story</div>
       </div>
     </section>
 
-    <!-- Portfolio -->
-    <section class="wrap section" id="work">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">A few favorites</div>
-          <h2>Selected work</h2>
+    <!-- Work: Coverflow Carousel -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2>My <em>Work</em></h2>
+          <p>
+            A collection of moments, places and people,
+            captured through my lens.
+          </p>
         </div>
 
-        <p class="section-intro">
-          A collection of people, places, and little in-between moments.
-          Choose a category to explore.
-        </p>
-      </div>
+        <!-- Work Category Filters -->
+        <div class="work-filters" aria-label="Filter photographs">
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="wedding" aria-pressed="false">Wedding</button>
+          <button class="filter" type="button" data-filter="child" aria-pressed="false">Child Photoshoot</button>
+          <button class="filter" type="button" data-filter="travel" aria-pressed="false">Travel</button>
+          <button class="filter" type="button" data-filter="portrait" aria-pressed="false">Portraits</button>
+        </div>
 
-      <div class="filters" role="group" aria-label="Filter portfolio">
-        <button class="filter active" data-filter="all">All work</button>
-        <button class="filter" data-filter="portraits">Portraits</button>
-        <button class="filter" data-filter="weddings">Weddings</button>
-        <button class="filter" data-filter="travel">Travel</button>
-      </div>
+        <div class="coverflow" id="coverflow">
 
-      <div class="gallery">
-        <article class="work-card" data-category="weddings">
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=85"
-            alt="Bride and groom celebrating their wedding">
-          <div class="work-caption">
-            <h3>The beginning</h3>
-            <p>Weddings · 2026</p>
+          <button
+            class="carousel-arrow prev"
+            type="button"
+            aria-label="Previous photo"
+          >‹</button>
+
+          <div class="coverflow-track">
+
+            <button
+              class="coverflow-slide"
+              type="button"
+              aria-label="Show mountain landscape"
+              data-category="travel"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+                alt="Mountain landscape beside a lake"
+                loading="lazy"
+              >
+            </button>
+
+            <button
+              class="coverflow-slide"
+              type="button"
+              aria-label="Show portrait"
+              data-category="portrait"
+            >
+              <img
+                src="./Assets/VIS00288.jpg"
+                alt="Portrait photography"
+                loading="lazy"
+              >
+            </button>
+
+            <button
+              class="coverflow-slide"
+              type="button"
+              aria-label="Show wedding photography"
+              data-category="wedding"
+            >
+              <img
+                src="./Assets/AND04461.JPG"
+                alt="Bride looking down"
+                loading="lazy"
+              >
+            </button>
+
+            <button
+              class="coverflow-slide"
+              type="button"
+              aria-label="Show wedding photography"
+              data-category="wedding"
+            >
+              <img
+                src="./Assets/IMG_2448.JPG"
+                alt="Bride in Black&White"
+                loading="lazy"
+              >
+            </button>
+
+            <button
+              class="coverflow-slide"
+              type="button"
+              aria-label="Show wedding photography"
+              data-category="wedding"
+            >
+              <img
+                src="./Assets/AND04323.JPG"
+                alt="Bride holding nosering"
+                loading="lazy"
+              >
+            </button>
+<button
+              class="coverflow-slide"
+              type="button"
+              aria-label="Show wedding photography"
+              data-category="wedding"
+            >
+              <img
+                src="./Assets/AND02046.JPG"
+                alt= "Standing Bride"
+                loading="lazy"
+              >
+            </button>
+            <button
+              class="coverflow-slide"
+              type="button"
+              aria-label="Show wedding photography"
+              data-category="wedding"
+            >
+              <img
+                src="./Assets/AND01961copy.jpg"
+                alt="Wedding Couples in frame"
+                loading="lazy"
+              >
+            </button>
           </div>
-        </article>
 
-        <article class="work-card" data-category="portraits">
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
-            alt="Editorial portrait of a woman">
-          <div class="work-caption">
-            <h3>In her element</h3>
-            <p>Portraits · 2025</p>
-          </div>
-        </article>
+          <button
+            class="carousel-arrow next"
+            type="button"
+            aria-label="Next photo"
+          >›</button>
 
-        <article class="work-card" data-category="travel">
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=85"
-            alt="Lake surrounded by mountains">
-          <div class="work-caption">
-            <h3>Quiet places</h3>
-            <p>Travel · 2025</p>
-          </div>
-        </article>
+        </div>
 
-        <article class="work-card" data-category="portraits">
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85"
-            alt="Natural-light portrait of a man">
-          <div class="work-caption">
-            <h3>Unfiltered</h3>
-            <p>Portraits · 2025</p>
-          </div>
-        </article>
-
-        <article class="work-card" data-category="weddings">
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"
-            alt="Wedding celebration">
-          <div class="work-caption">
-            <h3>All together</h3>
-            <p>Weddings · 2024</p>
-          </div>
-        </article>
-
-        <article class="work-card" data-category="travel">
-          <img loading="lazy"
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85"
-            alt="Sunlit landscape and open road">
-          <div class="work-caption">
-            <h3>Somewhere new</h3>
-            <p>Travel · 2024</p>
-          </div>
-        </article>
+        <div
+          class="carousel-dots"
+          id="carousel-dots"
+          aria-label="Choose a photo"
+        ></div>
       </div>
     </section>
 
     <!-- About -->
     <section class="wrap section about" id="about">
       <div class="about-image">
-        <img loading="lazy"
-          src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1000&q=85"
-          alt="Photographer holding a camera">
+        <img
+          src="./Assets/Ajay.jpeg"
+          alt="Photographer holding a camera"
+          loading="lazy"
+        >
       </div>
 
       <div class="about-copy">
         <div class="eyebrow">Behind the lens</div>
-        <h2>Hey, I'm Alex.</h2>
+        <h2>Hey, I'm Ajay.</h2>
 
         <p>
           I believe the best photographs feel like you were there.
@@ -156,21 +215,23 @@
         </p>
 
         <p>
-          Based in [Your City], available for assignments and adventures worldwide.
+          Based in Kanpur, available for assignments and adventures worldwide.
         </p>
 
         <div class="stats">
           <div class="stat">
-            <strong>8+</strong>
+            <strong>5+</strong>
             <span>Years creating</span>
           </div>
+
           <div class="stat">
             <strong>120</strong>
             <span>Stories told</span>
           </div>
+
           <div class="stat">
-            <strong>14</strong>
-            <span>Countries</span>
+            <strong>10+</strong>
+            <span>Cities</span>
           </div>
         </div>
 
@@ -228,24 +289,30 @@
         </div>
 
         <div class="contact-action">
-          <a class="button"
-            href="mailto:hello@example.com?subject=Photography%20enquiry">
+          <a
+            class="button"
+            href="mailto:hello@example.com?subject=Photography%20enquiry"
+          >
             hello@example.com ↗
           </a>
           <p>Usually replies within 2 business days.</p>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
   <footer class="wrap footer">
-    <span>© <span id="year"></span> Alex Morgan Photography</span>
+    <span>© <span id="year"></span> Ajay Photography</span>
 
     <div class="socials">
-      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-        Instagram ↗
-      </a>
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Instagram ↗</a>
+
       <a href="#home">Back to top ↑</a>
     </div>
   </footer>
